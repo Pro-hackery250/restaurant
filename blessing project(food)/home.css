@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: dashed;
+    list-style: none;
+    scroll-behavior: smooth;
+    transition: .6s ease;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    font-family: sans-serif;
+    
+}
+
+
+nav.scrolled{
+    border: none;
+    z-index: 2000;
+    background-color: transparent;
+}
+nav.scrolled ul{
+    padding: 0;
+}
+nav.scrolled ul .logo a{
+    transform: translateY(-150px);
+}
+nav.scrolled ul .bt{
+    transform: translateY(-150px);
+}
+nav.scrolled ul .list{
+    top: 0;
+    z-index: 9999;
+    padding: 30px 20px;
+    background-color: rgb(32, 31, 31);
+}
+nav.scrolled ul .list{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid grey;
+    background-color: rgb(0, 0, 0);
+
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 40px;
+}
+
+nav ul .logo a{
+        display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.logo a .con{
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    border-radius: 10px;
+}
+
+.logo a h2{
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 255, 145);
+}
+
+.list{
+        display: flex;
+    align-items: center;
+    gap: 1.7em;
+}
+
+.list li{
+    padding: 20px 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.list li::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    transition: .6s ease;
+    height: 5px;
+    background: linear-gradient(135deg,rgb(40, 222, 40),rgb(7, 181, 147));
+}
+.list li:hover::before{
+    width: 100%;
+}
+.list li a{
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+}
+
+.typed {
+  /* background: linear-gradient(135deg, var(--accent-color) 0%, color-mix(in srgb, var(--accent-color), #8b5cf6 50%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  background-clip: text; */
+  position: relative;
+}
+
+.typed::before{
+  content:'';
+  position: absolute;
+  bottom: 0;
+color: white;
+  width: 100%;
+  height: 40px;  
+  border-radius: 2px;
+}
+
+.bt a{
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: white;
+    background: linear-gradient(135deg,rgb(40, 222, 40),rgb(7, 181, 147));
+}
+.bt a:hover{
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: white;
+    background: linear-gradient(205deg,rgb(40, 222, 40),rgb(7, 181, 147));
+}
+
+.intros{
+    width: 100%;
+    
+}
+
+.intros ul{
+    padding: 130px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.intros .text{
+    width: 50%;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+}
+.text h2{
+    color: white;
+    font-size: 5rem;
+}
+.text p{
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: rgb(149, 148, 148);
+}
+.b{
+    margin-top: 1em;
+}
+.b a{
+    width: 100%;
+    padding: 20px 320px;
+    border-radius: 10px;
+    color: white;
+         background: linear-gradient(135deg,rgb(40, 222, 40),rgb(7, 181, 147));
+}
+
+mark{
+    background-color: rgb(50, 245, 99);
+}
+
+.image{
+    width: 40%;
+    height: 480px;
+        background: linear-gradient(15deg,rgb(40, 222, 40),rgb(7, 181, 147));
+}
+@media (min-width: 768px) {
+    .intros{
+        flex-direction: column;
+    }
+}
+.gallery{
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+}
+
+.gallery ul{
+    padding: 20px 40px;
+}
+.cate{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.cate a{
+    padding: 20px 40px;
+    color: grey;
+        /* background: linear-gradient(135deg,rgb(40, 222, 40),rgb(7, 181, 147)); */
+}
+.cate a:hover{
+    color: white;
+}
+
+.cate .active{
+    color: white;
+    border-bottom:5px solid rgb(27, 194, 141);
+    /* background: linear-gradient(135deg,rgb(40, 222, 40),rgb(7, 181, 147)); */
+}
+
+.mages{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2em;
+    padding: 30px 0;
+}
+
+.mages .mage{
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    background-color: rgb(35, 35, 35);
+    position: relative;
+    overflow: hidden;
+}
+.mage:hover .over{
+    height: 100%;
+    opacity: 1;
+}
+/* mark{
+    width: 0;
+    background-color: transparent;
+} */
+.over{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    
+    width: 100%;
+    height: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.over a{
+    padding: 20px 40px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(135deg,rgb(40, 222, 40),rgb(7, 181, 147)); 
+}
+
+.head{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+    width: 1005;
+}
+
+.head h1{
+    font-size: 3em;
+    color: white;
+}
+
+.head p{
+    color: whitesmoke;
+}
+.line{
+    width: 10%;
+    height: 5px;
+    border-radius: 20px;
+    background: linear-gradient(135deg,rgb(40, 222, 40),rgb(7, 181, 147)); 
+}
+
+.blogs{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 30px 0;
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+.blogs .blog{
+    width: 30%;
+    padding: 10px;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5em;
+    border-radius: 20px;
+    background-color: rgb(35, 35, 35);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.blog .pics{
+    width: 180px;
+    height: 180px;
+    border: 2px solid rgb(64, 255, 89);
+    border-radius: 50%;
+}
+.blog h2{
+    color: white;
+    font-size: 1.5rem;
+}
+.blog p{
+    color: rgb(142, 141, 141);
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+
+.blog:hover{
+    background-color: rgb(23, 23, 23);
+    box-shadow: 0 0px 10px rgba(0, 208, 59, 0.164);
+}
+.blog:hover::before{
+    opacity: 1;
+}
+
+
+/* chefs */
+
+.chefs{
+    width: 100%;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    margin-top: 2em;
+    justify-content: space-between;
+}
+.chefs .arrow{
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+}
+
+.chefs .chefer{
+    display: flex;
+    width: 100%;
+    gap: 1.4em;
+}
+
+
+.chefer .mages{
+    width: 40%;
+    height: 500px;
+    background: rgb(58, 58, 58); 
+    position: relative;
+    overflow: hidden;
+}
+.chefer .words{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+.words h2{
+    font-size: 3rem;
+    color: white;
+}
+.words p{
+    font-size: 1rem;
+    color: rgb(91, 231, 56);
+}
+.words #p{
+    font-size: 1.1rem;
+    color: white;
+    margin-top: 1em;
+}
+.other{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    gap: 1.1em;
+    display: flex;align-items: center;
+}
+
+.other .oth{
+    width: 50px;
+    height: 50px;
+    border: 2px solid orange;
+}
+
+.badge{
+    display: flex;
+    width: 100%;
+    gap: 1.4em;
+    margin-top: 1em;
+}
+
+.badge a{
+    padding: 15px;
+    color: white;
+    background-color: rgb(40, 39, 39);
+}
+
+.info{
+    margin-top: 1em;
+        display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
+.info h2{
+    font-size: 1.7em;
+    color: white;
+}
+.info p{
+    color: white;
+    font-size: 1.2em;
+}
+.info p strong{
+    color: rgb(58, 254, 58);
+}
+.ba{
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+.ba .soci{
+        display: flex;
+    align-items: center;
+    gap: 2em;
+    width: 50%;
+}
+.soci a{
+    padding: 10px 10px;
+            display: flex;
+    align-items: center;
+    gap: 2em;
+    background-color: rgb(58, 254, 58);
+}
+.ba a{
+    background-color: rgb(202, 135, 36);
+    padding: 20px 150px;
+}
